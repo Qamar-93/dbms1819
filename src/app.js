@@ -7,13 +7,12 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const app = express();
 app.use(compression());
-app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
+app.use(express.static(path.join(__dirname, '..', 'views'), { maxAge: '30d' }));
 app.use('/api/', routes);
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'views', '404.html'));
 });
 
 app.use((err, req, res) => {
