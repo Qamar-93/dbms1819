@@ -1,0 +1,69 @@
+section.login{
+  padding-top: 20vh;
+  background-image: linear-gradient(to bottom, black, black 50%, white 50%);
+  height: 100vh;
+  justify-content: center;
+}
+.login .container{
+  background: white;
+  max-width: 320px;
+  -webkit-box-shadow: 1px 1px 9px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    1px 1px 9px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         1px 1px 9px 0px rgba(50, 50, 50, 0.75);
+  padding: 20px 10px;
+  padding-bottom: 60px;
+  margin-top: 20px;
+}
+.login h3{
+  text-align: center;
+}
+.login__container label{
+  display: block;
+  margin: 10px 0;
+}
+.login__container label input{
+  margin-top: 10px;
+  height: 30px;
+  padding-left: 10px;
+  display: block;
+}
+.login__container .btn{
+  width: 100%;
+  height: 30px;
+  background: black;
+  color: white;
+  border: none;
+}
+.overlayLoading{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+}
+#loginForm{
+  margin: 0 auto;
+}
+.errorNote{
+  background: #b00000;
+  padding: 5px;
+  color: white;
+}
+.successNote{
+  background: #1dab4b;
+  color: white;
+  height: 30px;
+  margin-right: 31px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayLoading{
+  justify-content: center;
+}

@@ -1,0 +1,45 @@
+.formDash{
+  display: flex;
+  flex-direction: column;
+}
+.formDash input{
+  margin: 10px 0;
+  height: 30px;
+}
+.btnDash{
+  width: 70px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  background: #303030;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+#addProjectForm select {
+    border: 1px solid #b4b4b4;
+    margin-left: 5px;
+}
+#newsImage{
+  margin-left: 5px;
+}
+.addProject__forms{
+  display: flex;
+  margin-bottom: 10px;
+}
+.form__en, .form__ar{
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.form__ar input, .form__ar textarea{
+  text-align: right;
+}
+.addProject__addCat{
+  width: 80%;
+  max-width: 300px;
+  margin: 10px auto;
+  background: #d7d7d7;
+  border: 1px solid gray;
+  font-weight: 600;
+}

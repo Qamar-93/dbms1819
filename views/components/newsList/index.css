@@ -1,0 +1,33 @@
+
+.newsList{
+  margin-top: 140px;
+}
+.newsList__items{
+  background-color: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 150px;
+}
+.newsList__col{
+  margin-right: 30px;
+  width: 30%;
+  margin-top: 60px;
+}
+.rtl .latestNews__news-content, .rtl .latestNews__news-title, .rtl .latestNews__date{
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .newsList{
+    margin-top: 44px;
+  }
+  .newsList .container{
+    padding: 0 34px;
+  }
+  .newsList__col{
+    width: 100%;
+    margin: 30px 0;
+  }
+  .latestNews__img img{
+    max-height: 300px;
+  }
+}

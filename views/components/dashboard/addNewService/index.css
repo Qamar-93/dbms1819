@@ -1,0 +1,7 @@
+.addService__form{
+  display: flex;
+  flex-direction: column;
+}
+.addService__note{
+  width: 200px;
+}

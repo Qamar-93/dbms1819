@@ -1,0 +1,72 @@
+.latestProject{
+  background-image: linear-gradient(to right, #242424, #242424 50%, white 50%);
+  padding: 0 36px;
+}
+.rtl .latestProject{
+  background-image: linear-gradient(to right, white, white 50%, #242424 50%);
+}
+.latestProject__content{
+  background-color: white;
+  padding-top: 30px;
+  display: flex;
+}
+.latestProject__subtitle{
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #242424;
+  margin-bottom: 0px;
+}
+.latestProject__paragraph{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 24px;;
+    letter-spacing: normal;
+    text-align: left;
+    color: #242424;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+.latestProject__description{
+  width: 25%;
+  margin-left: 30px;
+  margin-bottom: 28px;
+}
+.latestProject__link{
+    border: solid 1px #eae094;
+    background-color: Transparent;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3;
+    letter-spacing: normal;
+    text-align: center;
+    color: #242424;
+    max-width: 180px;
+    padding: 7px 18px;
+}
+.latestProject__slide{
+  padding-left: 33px;
+}
+.rtl .latestProject__slide{
+  padding-left: 0px;
+  padding-right: 60px;
+}
+@media screen and (max-width: 800px) {
+  .latestProject__description, .col60{
+    width: 100%;
+  }
+  .latestProject__slide{
+    padding-left: 60px;
+  }
+  .latestProject{
+    padding: 0 36px;
+  }
+}

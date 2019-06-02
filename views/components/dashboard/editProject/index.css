@@ -1,0 +1,23 @@
+.editProject{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.editProject h3{
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.editProject__details{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.editProject__photos{
+  margin-top: -46px;
+}
+.textInput__description{
+  min-width: 300px;
+  min-height: 100px;
+}

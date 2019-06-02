@@ -1,0 +1,116 @@
+.joinUs{
+  margin-top: 140px;
+}
+.joinUs__container{
+  background: white;
+  padding: 72px 0;
+}
+.joinUs__sub-title{
+  font-size: 24px;
+  color: #242424;
+  margin-bottom: 27px;
+}
+.joinUs__form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.joinUs__label-input{
+  width: 49%;
+  color: #b2b2b2;
+  font-size: 10px;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+}
+.joinUs__label-input input, .joinUs__label-input select, .joinUs__label-input option{
+  border: 2px solid #e0e0e0;
+  height: 48px;
+  width: 100%;
+  background: none;
+  padding: 2px 7px;
+  box-sizing: border-box;
+}
+.joinUs__label-upload{
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  min-height: 216px;
+}
+.joinUs__upload-container{
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 1s;
+}
+.joinUs__label-upload input{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.joinUs__upload-desc{
+  color: #b2b2b2;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 32px;
+  text-transform: none;
+}
+.joinUs__upload-desc span{
+  color: #ffdd8a;
+}
+.joinUs__folder-icon{
+  font-size: 92px;
+  color: #ffdd8a;
+}
+.joinUs__submit button{
+  border: 1px solid white;
+  cursor: pointer;
+  color: #242424;
+  background: #ffdd8a;
+  font-weight: 700;
+  font-size: 14px;
+  max-width: 187px;
+  width: 100%;
+  height: 48px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+.joinUs__submit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.joinUs__myFile-delete{
+  color: red;
+  font-weight: 700;
+  margin: 0 15px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.joinUs__label-upload-draging .joinUs__upload-container{
+  background: #cbc9ff;
+}
+
+@media screen and (max-width: 800px) {
+  .joinUs__container{
+    padding: 12px 36px;
+  }
+  .joinUs__label-input{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .joinUs__submit{
+    margin-bottom: 90px;
+  }
+}

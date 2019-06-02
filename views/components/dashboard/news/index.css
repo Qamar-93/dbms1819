@@ -1,0 +1,8 @@
+.newsBoard .rt-td{
+  max-height: 100px;
+
+}
+.newsBoard .rt-td img{
+  max-height: 100%;
+  max-width: 100%;
+}
