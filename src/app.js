@@ -4,7 +4,6 @@ const path = require('path');
 const routes = require('./controllers/api/v1/index');
 const compression = require('compression');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const app = express();
 app.use(compression());
 app.use(bodyParser.json());
