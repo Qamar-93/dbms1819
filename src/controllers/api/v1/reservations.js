@@ -22,6 +22,17 @@ const  getReservationView = (req, res) => {
         }
     });
 };
+
+const  getMyReservation = (req, res) => {
+  queries.reservation.getMyReservation(req.query.userId,(error, result) => {
+      if (error)
+      res.status(500).json({ message: error.message });
+      else{
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(result));
+      }
+  });
+};
 const  makeOrder = (req, res) => {
     data = req.body;
     queries.reservation.makeOrder(data.reservation_id, data.service_id, data.state, (error, result) => {
@@ -36,7 +47,8 @@ const  makeOrder = (req, res) => {
 module.exports = {
    makeReservation,
    getReservationView,
-   makeOrder
+   makeOrder,
+   getMyReservation
   };
     
     
