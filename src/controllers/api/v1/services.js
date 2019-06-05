@@ -12,20 +12,32 @@ const getServices = (req, res) => {
   });
 };
 
-const getServicesByType = (req, res) => {
-const data = req.params.type;
-queries.services.getServicesByType((error, result) => {
-  if (error)
-    res.status(500).json({ message: error.message });
-  else{
-  res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(result));
-  }
-});
-};
-const checkAvailability = (req, res) => {
-  const data = req.body;
-  queries.services.checkAvailability(data.reservation_id, data.service_id, (error, result) => {
+// const getServicesByType = (req, res) => {
+// const data = req.params.type;
+// queries.services.getServicesByType((error, result) => {
+//   if (error)
+//     res.status(500).json({ message: error.message });
+//   else{
+//   res.setHeader('Content-Type', 'application/json');
+//     res.end(JSON.stringify(result));
+//   }
+// });
+// };
+const checkAvailability = (req, res) => {  
+  const data = req.query;
+  queries.services.checkAvailability(data.user_id, data.service_id, data.from, data.to, (error, result) => {
+    if (error)
+      res.status(500).json({ message: error.message });
+    else{
+    res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(result));
+    }
+  });
+  };
+  
+  
+const getAvialableRooms = (req, res) => {
+  queries.services.getAvialableRooms((error, result) => {
     if (error)
       res.status(500).json({ message: error.message });
     else{
@@ -36,6 +48,7 @@ const checkAvailability = (req, res) => {
   };
 module.exports = {
   getServices,
-  getServicesByType,
-  checkAvailability
+  // getServicesByType,
+  checkAvailability,
+  getAvialableRooms
 };

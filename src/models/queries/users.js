@@ -15,15 +15,20 @@ const addUser = (tax_code, name, email, phone_number, address_zip, address_stree
 };
 
 const getUser = (tax_code, cb) => {
+  user = {};
   const sql = {
-    text: 'SELECT * FROM hotel.client WHERE tax_code = $1',
-    values:tax_code
-  }
+    text: 'SELECT * FROM hotel.client WHERE hotel.client.tax_code = $1',
+    values:[tax_code]
+  }  
   connection.query(sql, (error, res) => {
     if (error)
       cb(error.message);
-    else
-      cb(null, res.rows);
+    else{      
+    if(res.rows.length == 0)
+      cb(null, {'user':'undefined'});
+      else
+        cb(null,res.rows[0]);
+    }
   });
 };
 
