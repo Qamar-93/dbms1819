@@ -1,0 +1,10 @@
+.bg-primary{
+    background-color: black !important;
+}
+.client_btn{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    color: #bd5d38;
+    font-weight: bold;
+}
