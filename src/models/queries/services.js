@@ -57,7 +57,7 @@ const checkAvailability = (user_id, service_id, from, to, cb) => {
          cb(null,{...{'durationIsValid': false}, ...res2});
         }
         else{          
-          cb(null,{...{'durationIsValid': true}, ...res2});
+          cb(null,{...{'durationIsValid': true}, ...{user:res2}});
       }
       }
     });

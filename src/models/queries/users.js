@@ -25,7 +25,7 @@ const getUser = (tax_code, cb) => {
       cb(error.message);
     else{      
     if(res.rows.length == 0)
-      cb(null, {'user':'undefined'});
+      cb(null, 'undefined');
       else
         cb(null,res.rows[0]);
     }
