@@ -54,7 +54,9 @@ font-weight: bold;
     width: 100px;
     text-align: center;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .sbmt-btn {
     background: #bd5d38;
     margin-top: 30px;

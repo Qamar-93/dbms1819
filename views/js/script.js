@@ -45,3 +45,45 @@ $('.datepicker.sample').datepicker({
 		})
 	}
 });
+function loadMyReservations(userId='tax_code2') {
+	resTable = document.querySelector('.myReservation-table tbody');
+	resTable.innerHTML = 'Loading...';
+	$.ajax({url: "http://localhost:4000/api/my-reservations?userId="+userId, success: function(result){
+		
+		resTable.innerHTML = result.reduce(function(acc,res){
+			return acc + `<tr>
+			<th scope="col">${moment(res.created_at).format('DD-MM-YYYY')}</th>
+			<th scope="col">${res.amount}</th>
+			<th scope="col">${JSON.parse(res.duration)}</th>
+			<th scope="col">${res.type}</th>
+			<th scope="col">${res.state}</th>
+		  </tr>`
+		},'')
+	  }});
+}
+function loadRooms() {
+	resTable = document.querySelector('#roomsList');
+	resTable.innerHTML = 'Loading...';
+	$.ajax({url: "http://localhost:4000/api/availabe-rooms", success: function(result){
+		
+		resTable.innerHTML = result.reduce(function(acc,res){
+			return acc + `<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0">${res.notes}</h3>
+              <ul>
+                <li>capacity: ${res.capacity} Adults</li>
+                <li>Price: ${res.price}$ / night</li>
+              </ul>
+            </div>
+            <div class="resume-date text-md-right">
+              <a class="text-primary text-left" href="#">
+                  view more details
+              </a>
+              <a href="#book_room" class="book_it js-scroll-trigger">
+                  Book it
+              </a>
+            </div>
+          </div>`
+		},'');
+	  }});
+}

@@ -105,26 +105,9 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="list_rooms">
       <div class="w-100">
         <h2 class="mb-5">Available Rooms</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Room#57</h3>
-            <ul>
-              <li>capacity: 2 Adults</li>
-              <li>Price: 60$ / night</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <a class="text-primary text-left" href="#">
-                view more details
-            </a>
-            <a href="#book_room" class="book_it js-scroll-trigger">
-                Book it
-            </a>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+        <span onclick="loadRooms()">Refresh</span>
+        <div id="roomsList">
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="resume-content">
               <h3 class="mb-0">Room#57</h3>
               <ul>
@@ -141,8 +124,8 @@
               </a>
             </div>
           </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+      
+            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
                 <h3 class="mb-0">Room#57</h3>
                 <ul>
@@ -159,8 +142,26 @@
                 </a>
               </div>
             </div>
-
+      
             <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="resume-content">
+                <h3 class="mb-0">Room#57</h3>
+                <ul>
+                  <li>capacity: 2 Adults</li>
+                  <li>Price: 60$ / night</li>
+                </ul>
+              </div>
+              <div class="resume-date text-md-right">
+                <a class="text-primary text-left" href="#">
+                    view more details
+                </a>
+                <a href="#book_room" class="book_it js-scroll-trigger">
+                    Book it
+                </a>
+              </div>
+            </div>
+  
+              <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="resume-content">
                   <h3 class="mb-0">Room#57</h3>
                   <ul>
@@ -176,7 +177,8 @@
                       Book it
                   </a>
                 </div>
-              </div>
+              </div>      
+        </div>
         
       </div>
       
@@ -221,36 +223,21 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="view2">
       <div class="w-100">
         <h2 class="mb-5">My reservations</h2>
+        <span onclick="loadMyReservations()">Refresh</span>
 
         
-        <table class="table">
+        <table class="table myReservation-table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">date</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Duration</th>
+              <th scope="col">type</th>
+              <th scope="col">status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            <!-- Loaded by Javascript -->
           </tbody>
         </table>
       </div>
