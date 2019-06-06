@@ -29,7 +29,7 @@ const getServices = cb => {
 
 const getAvialableRooms = cb => {
   const sql = {
-    text:`SELECT distinct(hotel_service.id), hotel_service.capacity, hotel_service.price, availability_period.duration, availability_period.notes FROM hotel.hotel_service LEFT OUTER JOIN hotel.availability_period on hotel_service.id=availability_period.service_id WHERE  availability_period.reservation_id is null AND lower(availability_period.duration) < now() AND hotel_service.type='room';`
+    text:`SELECT distinct(hotel_service.id), hotel_service.capacity, hotel_service.price, availability_period.duration, availability_period.notes FROM hotel.hotel_service LEFT OUTER JOIN hotel.availability_period on hotel_service.id=availability_period.service_id WHERE  availability_period.reservation_id is null AND lower(availability_period.duration) < now() AND upper(availability_period.duration) > now()  AND hotel_service.type='room';`
   };
   connection.query(sql, (error, res) => {
     if (error) {

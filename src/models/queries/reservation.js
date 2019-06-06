@@ -1,9 +1,9 @@
 const connection = require('../database/db_connection.js');
 
-const makeReservation = (client_id, state, notes = '',amount, cb) => {
+const makeReservation = (client_id, cb) => {
   const sql = {
-      text: `INSERT INTO hotel.reservation (client_id, state ,created_at, notes, amount) VALUES ($1,$2,$3,$4,$5) RETURNING client_id;`,
-      vlaues:[ client_id, state,Date.now(), notes = '',amount]
+      text: `INSERT INTO hotel.reservation (client_id,  ,created_at, notes, amount) VALUES ($1,$2,$3,$4,$5) RETURNING client_id;`,
+      vlaues:[ client_id, 'requested',Date.now(), 'No notes',1]
     };
   connection.query(sql, (error, res) => {
     if (error) {

@@ -1,7 +1,7 @@
 const queries = require('../../../models/queries/index.js');
 const  makeReservation = (req, res) => {
         const data = req.body;
-        queries.reservation.makeReservation(data.client_id, data.state, data.notes,data.amount,(error, result) => {
+        queries.reservation.makeReservation(data.client_id,(error, result) => {
           if (error)
             res.status(500).json({ message: error.message });
           else{
