@@ -74,6 +74,7 @@ function loadMyReservations(userId='tax_code2') {
 			<th scope="col">${d?moment(d[0]).format('DD-MM-YYYY')+' to ':''}${d?moment(d[1]).format('DD-MM-YYYY'):''}</th>
 			<th scope="col">${res.type}</th>
 			<th scope="col">${res.state}</th>
+			<th scope="col">${res.notes}</th>
 		  </tr>`
 		},'')
 	  }});
