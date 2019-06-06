@@ -38,13 +38,14 @@ $('.datepicker.sample').datepicker({
 				$.ajax({
 					url: `/api/check-user-dates?user_id=${$("#taxCode").val()}&service_id=10&&from=${$("#form_from").val()}&to=${$("#form_to").val()}`,
 					success: function(result){
-						if(result.tax_code || result.user){ // TODO result.durationIsValid check
+						
+						if(result.user != "undefined"){ // TODO result.durationIsValid check
 							$('#username_span').html(result.user.name)
 							$("#form :input").prop("disabled", true);
 							taxCodeForm.classList.add('disabled');
 							$("#payment-form").removeClass('hidden');
 					}else{
-							alert('duratuion or user id is not available');
+							alert('user is not registered');
 						}
 					}});
 
