@@ -1,6 +1,9 @@
 a:hover {
     text-decoration: none;
 }
+.hidden{
+    display: none !important;
+}
 .admin_btn {
     position: fixed;
 right: 50px;
@@ -65,6 +68,22 @@ html {
     transition: 0.5s all;
     color: white;
     font-weight: bold;
+}
+.back-btn{
+    background: black;
+margin-top: 30px;
+width: 180px;
+display: block;
+transition: 0.5s all;
+color: white;
+font-weight: bold;
+}
+#payment-form{
+    display: flex;
+
+flex-direction: column;
+
+max-width: 300px;
 }
 .sbmt-btn:hover {
     opacity: 0.8;

@@ -71,13 +71,20 @@
         <div class="w-100">
           <h3 class="mb-0">Reservations
           </h3>
-          <table class="table">
+          <span onclick="loadReservations()">Refresh</span>
+          <table class="table reservations-table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">reservation_id</th>
+                <th scope="col">service_type</th>
+                <th scope="col">client_name</th>
+                <th scope="col">client_tax_code</th>
+                <th scope="col">order_state</th>
+                <th scope="col">created_at</th>
+                <th scope="col">approved_by</th>
+                <th scope="col">notes</th>
+                <th scope="col">amount</th>
+
               </tr>
             </thead>
             <tbody>
@@ -126,7 +133,7 @@
   
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/admin.js"></script>
 
 </body>
 

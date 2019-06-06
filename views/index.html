@@ -194,7 +194,7 @@
         <form id="form">
           <div class="form-group">
             <label for="exampleInputEmail1">tax code/Id number (eg.MRTMTT25D09F205Z)</label>
-            <input required type="text" class="form-control codfiscale required" aria-describedby="emailHelp" placeholder="enter your id number">
+            <input id="taxCode" required type="text" class="form-control codfiscale required" aria-describedby="emailHelp" placeholder="enter your id number">
           </div>
           <div class="dates_group">
             <label for="from" class="wrapper">
@@ -208,11 +208,16 @@
           <button type="submit" class="btn btn-primary sbmt-btn">Submit</button>
         </form>
         <hr class="m-10">
-        <form>
-          <h3>Hello <span id="username_span">Walid</span></h3>
+        <form id="payment-form" class="hidden">
+          <h3>Welcome back <span id="username_span">client1</span></h3>
           <p>Please enter you payment number to confirm reservation</p>
+          <p>eg.2541856223574</p>
           <input type="text" required placeholder="payment number..">
-          <input type="submit" class='btn sbmt-btn' value="Confirm">
+          <div class="btn-group">
+            <input type="submit" class='btn sbmt-btn' value="Confirm">
+            <input type="button" class='btn back-btn' onclick="formBack()" value="Back">
+          </div>
+          
         </form>
       </div>
 
