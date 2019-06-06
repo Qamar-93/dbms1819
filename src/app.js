@@ -9,6 +9,9 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'views'), { maxAge: '30d' }));
+app.use('/admin', (req,res)=>{
+  res.sendFile(path.join(__dirname, '..', 'views', 'admin.html'));
+});
 app.use('/api/', routes);
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, '..', 'views', '404.html'));

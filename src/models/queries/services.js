@@ -54,7 +54,7 @@ const checkAvailability = (user_id, service_id, from, to, cb) => {
         cb(error.message);
       } else {
         if(res1.rows.length == 0){// no service          
-         cb(null,{...{'durationIsValid': false}, ...res2});
+         cb(null,{...{'durationIsValid': false}, ...{user:res2}});
         }
         else{          
           cb(null,{...{'durationIsValid': true}, ...{user:res2}});
